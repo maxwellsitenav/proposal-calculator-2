@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposal Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Proposal Calculator</h1>
+
+  <div class="form">
+    <label>Number of Users: <input type="number" id="users"></label><br>
+    <label>Product Tier:
+      <select id="tier">
+        <option>Basic</option>
+        <option>Pro</option>
+        <option>Enterprise</option>
+      </select>
+    </label><br>
+    <label>Term Length (years): <input type="number" id="term"></label><br>
+    <label>Manual Discount (%): <input type="number" id="manualDiscount" placeholder="Optional"></label><br>
+    <button onclick="onCalculate()">Calculate</button>
+    <button onclick="exportTableAsImage()">Export as Image</button>
+  </div>
+
+  <div id="tableContainer"></div>
+
+  <!-- html2canvas for exporting -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
